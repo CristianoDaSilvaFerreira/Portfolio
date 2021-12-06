@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
 import { Container, TextContainer, InfosContainer, CodeItem } from './styles';
-import picute from '../../assets/personal1.webp';
+import picute from '../../assets/personal.webp';
 
 function HomeHero() {
   return (

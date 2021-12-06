@@ -12,6 +12,7 @@ export const Container = styled.section`
   > img {
     width: 40rem;
     flex: 1;
+    opacity: 0.5;
   }
 
   > div {
@@ -31,7 +32,6 @@ export const Container = styled.section`
   @media (max-width: 1000px) {
     > img {
       width: 22rem;
-      opacity: 0.6;
     }
   }
 
@@ -89,14 +89,14 @@ export const CodeItem = styled.pre`
   font-family: 'JetBrains Mono', monospace;
   font-weight: 300;
   color: #fff;
-  width: 24rem;
+  width: 40rem;
   align-self: flex-start;
   transition: 1s;
 
   @media (max-width: 1450px) {
     width: 18rem;
     padding: 1.5rem;
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 
   @media (max-width: 1000px) {
