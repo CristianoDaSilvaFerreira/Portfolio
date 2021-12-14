@@ -3,6 +3,7 @@ import Profiency from '../components/Profiency';
 import Header from '../components/Header';
 import HomeHero from '../components/HomeHero';
 import About from '../components/About';
+import FinishProjects from '../components/FinishProjects';
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
         <HomeHero />
         <About />
         <Profiency />
+        <FinishProjects />
       </main>
     </HomeContainer>
   );
