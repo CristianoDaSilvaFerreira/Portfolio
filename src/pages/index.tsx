@@ -4,6 +4,7 @@ import Header from '../components/Header';
 import HomeHero from '../components/HomeHero';
 import About from '../components/About';
 import FinishProjects from '../components/FinishProjects';
+import Know from '../components/Know';
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
         <About />
         <Profiency />
         <FinishProjects />
+        <Know />
       </main>
     </HomeContainer>
   );
