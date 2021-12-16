@@ -114,7 +114,7 @@ export const CodeItem = styled.pre`
   }
 
   > div {
-    margin: 0%.2rem 0;
+    margin: 0.2rem 0;
     margin-left: 1rem;
   }
 
