@@ -6,6 +6,7 @@ import About from '../components/About';
 import FinishProjects from '../components/FinishProjects';
 import Know from '../components/Know';
 import FormContact from '../components/FormContact';
+import Footer from '../components/Footer';
 
 export default function Home() {
   return (
@@ -20,6 +21,8 @@ export default function Home() {
         <Know />
         <FormContact />
       </main>
+
+      <Footer />
     </HomeContainer>
   );
 }
