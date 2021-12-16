@@ -14,22 +14,26 @@ function HomeHero() {
         <InfosContainer>
           <CodeItem>
             <span className="comment">//Minha apresentação</span>
-            <span className="purple">Infos</span> {'\u007B'}
+            <span className="purple">Infos</span>
+            <span className="unicode"> {'\u007B'}</span>
             <div>
               Nome: <span className="blue">Cristiano</span>
             </div>
             <div>
               Sobrenome: <span className="blue">Ferreira</span>
             </div>
+            <span className="unicode">{'\u007D'}</span>
           </CodeItem>
           <CodeItem>
-            <span className="purple">Cargo</span> {'\u007B'}
+            <span className="purple">Cargo</span>
+            <span className="unicode"> {'\u007B'}</span>
             <div>
               Função: <span className="blue">Dev Front-End</span>
             </div>
             <div>
               Endereço: <span className="blue">Nova Iguaçu - RJ</span>
             </div>
+            <span className="unicode"> {'\u007D'}</span>
           </CodeItem>
         </InfosContainer>
       </div>

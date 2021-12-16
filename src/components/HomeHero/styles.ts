@@ -126,6 +126,10 @@ export const CodeItem = styled.pre`
     color: #7ac7e3;
   }
 
+  span.unicode {
+    color: #eb5b5b;
+  }
+
   span.comment {
     color: ${({ theme }) => theme.text};
     margin-bottom: 1rem;
