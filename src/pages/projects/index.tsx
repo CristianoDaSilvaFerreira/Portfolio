@@ -1,6 +1,6 @@
 import Header from '../../components/Header';
 import ProjectsItems from '../../components/ProjectsItems';
-import { ProjectContainer } from '../../styles/ProjectStyles';
+import { ProjectContainer } from '../../styles/ProjectsStyles';
 
 export default function Projects() {
   return (
