@@ -114,7 +114,7 @@ export const CodeItem = styled.pre`
   }
 
   > div {
-    margin: 0%.2rem 0;
+    margin: 0.2rem 0;
     margin-left: 1rem;
   }
 
@@ -124,6 +124,10 @@ export const CodeItem = styled.pre`
 
   span.blue {
     color: #7ac7e3;
+  }
+
+  span.unicode {
+    color: #eb5b5b;
   }
 
   span.comment {

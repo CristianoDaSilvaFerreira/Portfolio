@@ -78,6 +78,24 @@ export const AboutContainer = styled.div`
     }
   }
 
+  div > p {
+    margin: 0.2rem 0;
+    margin-left: 1rem;
+    > p {
+      display: block;
+      margin-left: 5rem;
+      color: red;
+    }
+  }
+
+  span.purple {
+    color: #c38cdd;
+  }
+
+  span.unicode {
+    color: #eb5b5b;
+  }
+
   &:hover > div {
     filter: brightness(1.2);
   }

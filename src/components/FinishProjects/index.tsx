@@ -1,35 +1,36 @@
 import Link from 'next/link';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import { AiOutlineCode } from 'react-icons/ai';
 import SectionTitle from '../SectionTitle';
 import ProjectItem from './ProjectItem';
-
 import { Container } from './styles';
 
-function FinishProjects() {
+interface InterfaceProject {
+  slug: string;
+  title: string;
+  type: string;
+  description: string;
+  link: string;
+  thumbnail: string;
+}
+interface ProjectProps {
+  projects: InterfaceProject[];
+}
+
+function FinishProjects({ projects }: ProjectProps) {
   return (
     <Container>
       <SectionTitle title="Últimos projetos" />
 
       <section>
-        <ProjectItem
-          title="Projeto 01"
-          type="Website"
-          slug="teste"
-          img="https://user-images.githubusercontent.com/68359459/128270251-f4050d70-c53d-4c98-9ef3-73b7c52d6206.png"
-        />
-        <ProjectItem
-          title="Projeto 02"
-          type="Website"
-          slug="teste"
-          img="https://user-images.githubusercontent.com/68359459/128270251-f4050d70-c53d-4c98-9ef3-73b7c52d6206.png"
-        />
-        <ProjectItem
-          title="Projeto 03"
-          type="Website"
-          slug="teste"
-          img="https://user-images.githubusercontent.com/68359459/128270251-f4050d70-c53d-4c98-9ef3-73b7c52d6206.png"
-        />
+        {projects.slice(0, 3).map(project => (
+          <ProjectItem
+            key={project.slug}
+            img={project.thumbnail}
+            title={project.title}
+            type={project.type}
+            slug={project.slug}
+          />
+        ))}
       </section>
       <button type="button">
         <Link href="/projects">

@@ -1,15 +1,9 @@
 import { GetStaticProps } from 'next';
 import Prismic from '@prismicio/client';
-import { HomeContainer } from '../styles/HomeStyles';
-import Profiency from '../components/Profiency';
-import Header from '../components/Header';
-import HomeHero from '../components/HomeHero';
-import About from '../components/About';
-import FinishProjects from '../components/FinishProjects';
-import Know from '../components/Know';
-import FormContact from '../components/FormContact';
-import Footer from '../components/Footer';
-import { getPrismicClient } from '../services/prismic';
+import { getPrismicClient } from '../../services/prismic';
+import Header from '../../components/Header';
+import ProjectsItems from '../../components/ProjectsItems';
+import { ProjectContainer } from '../../styles/ProjectsStyles';
 
 interface InterfaceProject {
   slug: string;
@@ -20,26 +14,26 @@ interface InterfaceProject {
   thumbnail: string;
 }
 
-interface HomeProps {
+interface ProjectProps {
   projects: InterfaceProject[];
 }
 
-export default function Home({ projects }: HomeProps) {
+export default function Projects({ projects }: ProjectProps) {
   return (
-    <HomeContainer>
+    <ProjectContainer>
       <Header />
-
       <main className="container">
-        <HomeHero />
-        <About />
-        <Profiency />
-        <FinishProjects projects={projects} />
-        <Know />
-        <FormContact />
+        {projects.map(project => (
+          <ProjectsItems
+            key={project.slug}
+            title={project.title}
+            type={project.type}
+            slug={project.slug}
+            imgUrl={project.thumbnail}
+          />
+        ))}
       </main>
-
-      <Footer />
-    </HomeContainer>
+    </ProjectContainer>
   );
 }
 
