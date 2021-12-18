@@ -1,27 +1,88 @@
+import { GetStaticPaths, GetStaticProps } from 'next';
+import { useRouter } from 'next/router';
+import Prismic from '@prismicio/client';
 import BannerProject from '../../../components/BannerProject';
 import Header from '../../../components/Header';
 import { ProjectContainer } from '../../../styles/ProjectStyles';
+import { getPrismicClient } from '../../../services/prismic';
+import LoadingScreen from '../../../components/LoadingScreen';
 
-export default function Project() {
+interface InterfaceProject {
+  slug: string;
+  title: string;
+  type: string;
+  description: string;
+  link: string;
+  thumbnail: string;
+}
+interface ProjectProps {
+  project: InterfaceProject;
+}
+
+export default function Project({ project }: ProjectProps) {
+  const router = useRouter();
+  if (router.isFallback) {
+    return <LoadingScreen />;
+  }
+
   return (
     <ProjectContainer>
       <Header />
       <BannerProject
-        title="Projeto 01"
-        type="Website"
-        imgUrl="https://user-images.githubusercontent.com/68359459/128270251-f4050d70-c53d-4c98-9ef3-73b7c52d6206.png"
+        title={project.title}
+        type={project.type}
+        imgUrl={project.thumbnail}
       />
 
       <main>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil nulla
-          rem, enim cum beatae odit. Cumque eveniet totam numquam, molestiae
-          magni voluptatem in qui dolorem.
-        </p>
+        <p>{project.description}</p>
         <button type="button">
-          <a href="#">Ver projeto online</a>
+          <a target="_blank" href={project.link} rel="noreferrer">
+            Ver projeto online
+          </a>
         </button>
       </main>
     </ProjectContainer>
   );
 }
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const prismic = getPrismicClient();
+  const projects = await prismic.query([
+    Prismic.predicates.at('document.type', 'project')
+  ]);
+
+  const paths = projects.results.map(project => ({
+    params: {
+      slug: project.uid
+    }
+  }));
+
+  return {
+    paths,
+    fallback: true
+  };
+};
+
+export const getStaticProps: GetStaticProps = async context => {
+  const prismic = getPrismicClient();
+  const { slug } = context.params;
+
+  const response = await prismic.getByUID('project', String(slug), {});
+
+  const project = {
+    slug: response.uid,
+    title: response.data.title,
+    type: response.data.type,
+    description: response.data.description,
+    link: response.data.link.url,
+    thumbnail: response.data.thumbnail.url
+  };
+
+  return {
+    props: {
+      project
+    },
+    revalidate: 172800
+  };
+};
