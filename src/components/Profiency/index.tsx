@@ -4,10 +4,10 @@ import { Container } from './styles';
 
 function Profiency() {
   return (
-    <Container>
+    <Container data-aos="fade-up">
       <SectionTitle title="Sobre" description="acadêmico & cursos" />
 
-      <section>
+      <section data-aos="fade-up" data-aos-anchor-placement="top-bottom">
         <ProfiencyItem
           year="2020"
           title="Graduação"

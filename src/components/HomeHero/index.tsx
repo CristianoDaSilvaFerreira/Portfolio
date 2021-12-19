@@ -4,8 +4,8 @@ import picute from '../../assets/personal.webp';
 
 function HomeHero() {
   return (
-    <Container>
-      <img src={picute} alt="Minha foto" />
+    <Container data-aos="fade-up">
+      <img src={picute} alt="Minha foto" data-aos="fade-up-right" />
       <div>
         <TextContainer>
           <h1>Hello</h1>

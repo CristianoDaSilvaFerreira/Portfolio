@@ -18,7 +18,7 @@ export default function ProfiencyItem({
 }: ProfiencyProps) {
   return (
     <ItemContainer>
-      <div>
+      <div data-aos="zoom-out-down">
         <h1>{year}</h1>
         <h2>{title}</h2>
         <p>{description}</p>

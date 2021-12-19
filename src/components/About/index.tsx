@@ -5,10 +5,10 @@ import { Container } from './styles';
 
 function About() {
   return (
-    <Container>
-      <SectionTitle title="Conheça-me" />
+    <Container data-aos="fade-up">
+      <SectionTitle title="Conheça-me" data-aos="flipe-left" />
 
-      <section>
+      <section data-aos="zoom-in">
         <AboutItem />
       </section>
     </Container>

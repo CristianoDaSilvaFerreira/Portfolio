@@ -10,8 +10,8 @@ import { Container } from './styles';
 function Know() {
   return (
     <Container>
-      <SectionTitle title="Conhecimentos" />
-      <section>
+      <SectionTitle title="Conhecimentos" data-aos="fade-up" />
+      <section data-aos="flip-left">
         <KnowItem title="HTML" icon={<AiFillHtml5 />} />
         <KnowItem title="CSS" icon={<FaCss3Alt />} />
         <KnowItem title="JavaScript" icon={<IoLogoJavascript />} />

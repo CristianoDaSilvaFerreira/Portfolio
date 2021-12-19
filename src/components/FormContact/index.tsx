@@ -4,7 +4,7 @@ import { Container } from './styles';
 
 function FormContact() {
   return (
-    <Container>
+    <Container data-aos="fade-up" data-aos-anchor-placement="center-center">
       <SectionTitle
         title={
           <>
