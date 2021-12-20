@@ -2,6 +2,7 @@ import { GetStaticProps } from 'next';
 import Prismic from '@prismicio/client';
 import { useEffect } from 'react';
 import Aos from 'aos';
+import Head from 'next/head';
 
 import Profiency from '../components/Profiency';
 import Header from '../components/Header';
@@ -35,6 +36,22 @@ export default function Home({ projects }: HomeProps) {
 
   return (
     <HomeContainer>
+      <Head>
+        <title>Home | Meu Portfólio</title>
+        <meta
+          name="description"
+          content="Sou um desenvolvedor Front-end e aqui apresento alguns projetos desenvolvidos por mim!"
+        />
+        <meta property="og:image" content="/ogimage.png" />
+        <meta property="og:image:secure_url" content="/ogimage.png" />
+        <meta name="twitter:image" content="/ogimage.png" />
+        <meta name="twitter:image:src" content="/ogimage.png" />
+        <meta
+          property="og:description"
+          content="Sou um desenvolvedor Front-end e aqui apresento alguns projetos desenvolvidos por mim!"
+        />
+      </Head>
+
       <Header />
 
       <main className="container">
