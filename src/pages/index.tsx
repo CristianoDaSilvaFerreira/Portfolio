@@ -1,8 +1,8 @@
 import { GetStaticProps } from 'next';
 import Prismic from '@prismicio/client';
 import { useEffect } from 'react';
-import Aos from 'aos';
 import Head from 'next/head';
+import Aos from 'aos';
 
 import Profiency from '../components/Profiency';
 import Header from '../components/Header';
