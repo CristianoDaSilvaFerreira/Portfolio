@@ -100,6 +100,7 @@ export const ItemContainer = styled.div`
     > div {
       height: auto;
       padding: 2rem;
+      max-width: 100%;
       h1 {
         font-size: 2rem;
       }
