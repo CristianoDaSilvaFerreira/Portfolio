@@ -33,6 +33,7 @@ function Profiency() {
           title="JavaScript"
           description="Curso online de JavaScript"
           institution="Hcode e Udemy"
+          hour="38.5 horas"
         />
       </section>
     </Container>
