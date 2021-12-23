@@ -18,7 +18,7 @@ export const Container = styled.section`
     @media (max-width: 700px) {
       gap: 3rem;
       flex-wrap: wrap;
-      margin-top: 50rem;
+      margin-top: 5rem;
     }
   }
 `;
@@ -32,14 +32,14 @@ export const KnowContainer = styled.div`
 
   p {
     color: ${({ theme }) => theme.primary};
-    font-size: 1.3rem;
     font-weight: 300;
+    font-size: 1.3rem;
     text-transform: uppercase;
   }
 
   svg {
-    width: 5rem;
-    height: 5rem;
+    width: 6.5rem;
+    height: 6.5rem;
     color: ${({ theme }) => theme.secondary};
     transition: 0.3s;
   }
@@ -57,8 +57,8 @@ export const KnowContainer = styled.div`
     }
 
     svg {
-      width: 4rem;
-      height: 4rem;
+      width: 5rem;
+      height: 5rem;
     }
   }
 `;

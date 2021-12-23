@@ -33,7 +33,7 @@ export default function AboutItem() {
         </div>
       </div>
       <button type="button">
-        <a>Download CV</a>
+        <a download="dev-frontend.png">Download CV</a>
       </button>
     </AboutContainer>
   );
