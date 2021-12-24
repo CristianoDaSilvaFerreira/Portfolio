@@ -32,9 +32,11 @@ export default function AboutItem() {
           </p>
         </div>
       </div>
-      {/* <button type="button">
-        <a download="dev-frontend.png">Download CV</a>
-      </button> */}
+      <button type="button">
+        <a href="/dev-frontend.pdf" target="_blank">
+          Download CV
+        </a>
+      </button>
     </AboutContainer>
   );
 }
