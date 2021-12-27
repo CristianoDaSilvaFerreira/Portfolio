@@ -71,7 +71,7 @@ export default function Form() {
         onChange={({ target }) => setEmail(target.value)}
       />
       <TextArea
-        placeholder="Mensangem"
+        placeholder="Mensagem"
         value={mensagem}
         onChange={({ target }) => setMensagem(target.value)}
       />

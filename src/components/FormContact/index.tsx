@@ -17,7 +17,7 @@ function FormContact() {
           <>
             Preencha o formulário abaixo que
             <br />
-            irie retornar em breve!
+            irei retornar em breve!
           </>
         }
       />

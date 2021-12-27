@@ -17,21 +17,21 @@ function HomeHero() {
             <span className="purple">Infos</span>
             <span className="unicode"> {'\u007B'}</span>
             <div>
-              Nome: <span className="blue">Cristiano</span>
+              Name: <span className="blue">Cristiano</span>
             </div>
             <div>
-              Sobrenome: <span className="blue">Ferreira</span>
+              Last Name: <span className="blue">Ferreira</span>
             </div>
             <span className="unicode">{'\u007D'}</span>
           </CodeItem>
           <CodeItem>
-            <span className="purple">Cargo</span>
+            <span className="purple">Office</span>
             <span className="unicode"> {'\u007B'}</span>
             <div>
-              Função: <span className="blue">Dev Front-End</span>
+              Occupation: <span className="blue">Dev Front-End</span>
             </div>
             <div>
-              Endereço: <span className="blue">Nova Iguaçu - RJ</span>
+              Address: <span className="blue">Nova Iguaçu - RJ</span>
             </div>
             <span className="unicode"> {'\u007D'}</span>
           </CodeItem>
