@@ -31,7 +31,7 @@ export default function Form() {
       setEmail('');
       setMensagem('');
 
-      toast('Mensagem enviada cm sucess!!', {
+      toast('Mensagem enviada com sucesso!!', {
         style: {
           background: theme.secondary,
           color: '#fff'
