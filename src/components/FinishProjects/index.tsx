@@ -22,7 +22,7 @@ function FinishProjects({ projects }: ProjectProps) {
       <SectionTitle title="Últimos projetos" />
 
       <section>
-        {projects.slice(0, 3).map(project => (
+        {projects.slice(0, 4).map(project => (
           <ProjectItem
             key={project.slug}
             img={project.thumbnail}
