@@ -82,7 +82,8 @@ export const getStaticProps: GetStaticProps = async () => {
     type: project.data.type,
     description: project.data.description,
     link: project.data.link.url,
-    thumbnail: project.data.thumbnail.url
+    thumbnail: project.data.thumbnail.url,
+    created_at: project.data.create
   }));
 
   return {
