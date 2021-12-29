@@ -10,19 +10,34 @@ interface InterfaceProject {
   type: string;
   description: string;
   link: string;
+  date: string;
   thumbnail: string;
+  created_at: string;
 }
 interface ProjectProps {
   projects: InterfaceProject[];
 }
 
 function FinishProjects({ projects }: ProjectProps) {
+  const formattedProjects = projects.map(item => {
+    const date = item.created_at?.split('/');
+    const parsedDate = new Date(`${date[2]}-${date[1]}-${date[0]}`);
+    return {
+      ...item,
+      created_at: parsedDate
+    };
+  });
+
+  const ordenedProjects = formattedProjects
+    .sort((a, b) => b.created_at.getTime() - a.created_at.getTime())
+    .slice(0, 3);
+
   return (
     <Container>
       <SectionTitle title="Últimos projetos" />
 
       <section>
-        {projects.slice(0, 3).map(project => (
+        {ordenedProjects.map(project => (
           <ProjectItem
             key={project.slug}
             img={project.thumbnail}

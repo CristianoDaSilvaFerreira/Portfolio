@@ -22,7 +22,9 @@ interface InterfaceProject {
   type: string;
   description: string;
   link: string;
+  date: string;
   thumbnail: string;
+  created_at: string;
 }
 
 interface HomeProps {
@@ -83,7 +85,7 @@ export const getStaticProps: GetStaticProps = async () => {
     description: project.data.description,
     link: project.data.link.url,
     thumbnail: project.data.thumbnail.url,
-    created_at: project.data.create
+    created_at: project.data.date
   }));
 
   return {
